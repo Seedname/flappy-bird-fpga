@@ -79,85 +79,9 @@ package constants_pkg;
 	localparam PLATINUM_WIDTH = 22;
 	localparam PLATINUM_HEIGHT = 22;
 
-	localparam ZERO_ROM = "sprites/ZERO.hex";
-	localparam ZERO_WIDTH = 7;
-	localparam ZERO_HEIGHT = 10;
-
-	localparam ONE_ROM = "sprites/ONE.hex";
-	localparam ONE_WIDTH = 7;
-	localparam ONE_HEIGHT = 10;
-
-	localparam TWO_ROM = "sprites/TWO.hex";
-	localparam TWO_WIDTH = 7;
-	localparam TWO_HEIGHT = 10;
-
-	localparam THREE_ROM = "sprites/THREE.hex";
-	localparam THREE_WIDTH = 7;
-	localparam THREE_HEIGHT = 10;
-
-	localparam FOUR_ROM = "sprites/FOUR.hex";
-	localparam FOUR_WIDTH = 7;
-	localparam FOUR_HEIGHT = 10;
-
-	localparam FIVE_ROM = "sprites/FIVE.hex";
-	localparam FIVE_WIDTH = 7;
-	localparam FIVE_HEIGHT = 10;
-
-	localparam SIX_ROM = "sprites/SIX.hex";
-	localparam SIX_WIDTH = 7;
-	localparam SIX_HEIGHT = 10;
-
-	localparam SEVEN_ROM = "sprites/SEVEN.hex";
-	localparam SEVEN_WIDTH = 7;
-	localparam SEVEN_HEIGHT = 10;
-
-	localparam EIGHT_ROM = "sprites/EIGHT.hex";
-	localparam EIGHT_WIDTH = 7;
-	localparam EIGHT_HEIGHT = 10;
-
-	localparam NINE_ROM = "sprites/NINE.hex";
-	localparam NINE_WIDTH = 7;
-	localparam NINE_HEIGHT = 10;
-
-	localparam ZERO_SMALL_ROM = "sprites/ZERO_SMALL.hex";
-	localparam ZERO_SMALL_WIDTH = 6;
-	localparam ZERO_SMALL_HEIGHT = 7;
-
-	localparam ONE_SMALL_ROM = "sprites/ONE_SMALL.hex";
-	localparam ONE_SMALL_WIDTH = 6;
-	localparam ONE_SMALL_HEIGHT = 7;
-
-	localparam TWO_SMALL_ROM = "sprites/TWO_SMALL.hex";
-	localparam TWO_SMALL_WIDTH = 6;
-	localparam TWO_SMALL_HEIGHT = 7;
-
-	localparam THREE_SMALL_ROM = "sprites/THREE_SMALL.hex";
-	localparam THREE_SMALL_WIDTH = 6;
-	localparam THREE_SMALL_HEIGHT = 7;
-
-	localparam FOUR_SMALL_ROM = "sprites/FOUR_SMALL.hex";
-	localparam FOUR_SMALL_WIDTH = 6;
-	localparam FOUR_SMALL_HEIGHT = 7;
-
-	localparam FIVE_SMALL_ROM = "sprites/FIVE_SMALL.hex";
-	localparam FIVE_SMALL_WIDTH = 6;
-	localparam FIVE_SMALL_HEIGHT = 7;
-
-	localparam SIX_SMALL_ROM = "sprites/SIX_SMALL.hex";
-	localparam SIX_SMALL_WIDTH = 6;
-	localparam SIX_SMALL_HEIGHT = 7;
-
-	localparam SEVEN_SMALL_ROM = "sprites/SEVEN_SMALL.hex";
-	localparam SEVEN_SMALL_WIDTH = 6;
-	localparam SEVEN_SMALL_HEIGHT = 7;
-
-	localparam EIGHT_SMALL_ROM = "sprites/EIGHT_SMALL.hex";
-	localparam EIGHT_SMALL_WIDTH = 6;
-	localparam EIGHT_SMALL_HEIGHT = 7;
-
-	localparam NINE_SMALL_ROM = "sprites/NINE_SMALL.hex";
-	localparam NINE_SMALL_WIDTH = 6;
-	localparam NINE_SMALL_HEIGHT = 7;
-
 	enum {BACKGROUND, FLOOR, SCOREBOARD, BIRD1, BIRD2, BIRD3, START, SCORE, OK, NEW, FLAPPY_BIRD, GAME_OVER, GET_READY, PIPE_TOP, PIPE_BOTTOM, TAP, BRONZE, SILVER, GOLD, PLATINUM, ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, ZERO_SMALL, ONE_SMALL, TWO_SMALL, THREE_SMALL, FOUR_SMALL, FIVE_SMALL, SIX_SMALL, SEVEN_SMALL, EIGHT_SMALL, NINE_SMALL} sprite_t;
+	typedef enum logic [2:0] {LEFT_ALIGN, CENTER_ALIGN, RIGHT_ALIGN} align_t;
+	localparam SCREEN_WIDTH = 640;
+	localparam SCREEN_HEIGHT = 480;
+
 endpackage
