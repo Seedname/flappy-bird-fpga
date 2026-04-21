@@ -32,12 +32,11 @@ module medal #(
     );
 
     always_comb begin
-        case (selected)
+        unique case (selected)
             0: pixel = bronze_medal;
             1: pixel = silver_medal;
             2: pixel = gold_medal;
             3: pixel = platinum_medal;
-            default: pixel = '0;
         endcase
     end
 

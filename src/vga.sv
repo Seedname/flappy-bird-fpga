@@ -32,17 +32,19 @@ module vga (
     logic signed [10:0] h_count_internal = 0;
     logic signed [10:0] v_count_internal = 0;
 
-    always_ff @(posedge video_clk) begin
-        if (h_count_internal == H_MAX - 1) begin
-            h_count_internal <= 0;
+    always_ff @(posedge clk) begin
+        if (video_clk) begin
+            if (h_count_internal == H_MAX - 1) begin
+                h_count_internal <= 0;
 
-            if (v_count_internal == V_MAX - 1)
-                v_count_internal <= 0;
-            else
-                v_count_internal <= v_count_internal + 1;
+                if (v_count_internal == V_MAX - 1)
+                    v_count_internal <= 0;
+                else
+                    v_count_internal <= v_count_internal + 1;
 
-        end else begin
-            h_count_internal <= h_count_internal + 1;
+            end else begin
+                h_count_internal <= h_count_internal + 1;
+            end
         end
     end
 
